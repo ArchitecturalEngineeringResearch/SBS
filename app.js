@@ -23,8 +23,6 @@ appliction.use(async (ctx, next) => {
   await middlewares.filter(ctx, next)
 });
 
-
-
 appliction.use(async (ctx, next) => {
   ctx.response.set('Access-Control-Allow-Origin', '*');
   await next();

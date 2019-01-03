@@ -5,28 +5,28 @@
  * @Last Modified time: 2018-06-09 15:55:08
  */
 const option = {
-    production:{
-        port:433,
-        mongodb:{
-            address:"mongodb://127.0.0.1:27017/SBS"
-        },
-        router:{
-            prefix:{
-                wxapp:'/wxapp'
-            }
-        }
+  production:{
+    port:433,
+    mongodb:{
+      address: 'mongodb://127.0.0.1:27017/SBS'
     },
-    develop:{
-        port:3000,
-        mongodb:{
-            address:"mongodb://127.0.0.1:27017/SBS"
-        },
-        router:{
-            prefix:{
-                wxapp:'/wxapp'
-            }
-        }
+    router:{
+      prefix:{
+        wxapp:'/wxapp'
+      }
+    } 
+  },
+  develop:{
+    port:3000,
+    mongodb:{
+      address:'mongodb://127.0.0.1:27017/SBS'
+    },
+    router:{
+      prefix:{
+        wxapp:'/wxapp'
+      }
     }
+  }
 }
 
 module.exports = option

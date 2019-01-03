@@ -11,11 +11,11 @@
  * @param {String} message 信息
  */
 module.exports = (status, res, message) => {
-    return {
-        data: res,
-        status: {
-            code: status,
-            message: message
-        }
+  return {
+    data: res,
+    status: {
+      code: status,
+      message: message
     }
+  }
 }

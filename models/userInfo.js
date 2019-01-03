@@ -14,47 +14,47 @@ let modelName = 'user_info'
 //集合结构
 let schema = new Schema({
 
-    //用户昵称
-    userName:{
-        type:String,
-        required:true
+  //用户昵称
+  userName:{
+    type:String,
+    required:true
+  },
+  //头像
+  avatar:{
+    type:String,
+    required:true
+  },
+  //微信ID
+  WXID:{
+    type:String,
+    required:true,
+  },
+  //手机
+  phone:{
+    type:Number,
+    unique:true,
+    validate:{
+      validator:function(v){
+        return /[1][3578]\d{9}/.test(v)
+      },
+      message:'{VALUE} is not a valid phone number!'
     },
-    //头像
-    avatar:{
-        type:String,
-        required:true
-    },
-    //微信ID
-    WXID:{
-        type:String,
-        required:true,
-    },
-    //手机
-    phone:{
-        type:Number,
-        unique:true,
-        validate:{
-            validator:function(v){
-                return /[1][3578]\d{9}/.test(v)
-            },
-            message:'{VALUE} is not a valid phone number!'
-        },
-        required:[true,'User phone number required!']
-    },
-    //个人描述
-    describe:{
-        type:String,
-        maxlength:50
-    },
-    //收藏全是帖子ID
-    collect:[String],
-    //发布记录 发布的帖子ID
-    record:[String],
-    //密码
-    password:{
-        type:String,
-        required:true
-    }
+    required:[true,'User phone number required!']
+  },
+  //个人描述
+  describe:{
+    type:String,
+    maxlength:50
+  },
+  //收藏全是帖子ID
+  collect:[String],
+  //发布记录 发布的帖子ID
+  record:[String],
+  //密码
+  password:{
+    type:String,
+    required:true
+  }
     
 },{autoIndex:true})
 

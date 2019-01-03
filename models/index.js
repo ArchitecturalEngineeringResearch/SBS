@@ -6,7 +6,8 @@
  */
 let location = require('./location')
 let userInfo = require('./userInfo')
+
 module.exports={
-    location,
-    userInfo
+  location,
+  userInfo
 } 
