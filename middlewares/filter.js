@@ -5,7 +5,7 @@
  * @Last Modified time: 2018-06-10 13:55:46
  */
 module.exports = async (ctx, next) => {
-    Logger.info(ctx.request);
-    await next();
-    Logger.info(ctx.response);
+  Logger.info(ctx.request);
+  await next();
+  Logger.info(ctx.response);
 };

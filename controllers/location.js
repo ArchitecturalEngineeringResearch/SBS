@@ -29,7 +29,7 @@ class Location {
             ctx.response.status = 200;
             ctx.response.body = JStr(200, res, 'OJBk');
         } else if (ctx.query.geo) {
-            //qurey查询默认查询当前位置范围5公里 客户端传上来的应该是geohash
+            //qurey查询默认查询当前位置范围5公里 客户端传上来的应该是geohash 5位
             let geo = ctx.query.geo;
             res = await lecationser.findNearList(geo);
             ctx.response.status = 200;
